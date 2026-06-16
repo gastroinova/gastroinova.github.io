@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gastroinova | Impulsora Digital de Comercios</title>
-    <meta name="description" content="En Gastroinova impulsamos tu comercio local y restaurante al entorno digital con diseño web personalizado, catálogos QR, tiendas online y marketing local.">
-    <!-- Google Fonts -->
+    <meta name="description" content="En Gastroinova impulsamos tu comercio local y restaurante al entorno digital con diseno web personalizado, catalogos QR, experiencias web premium y marketing local.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Header / Navbar -->
     <header class="main-header">
         <div class="header-container">
-            <a href="#" class="logo-link" id="header-logo">
+            <a href="#inicio" class="logo-link" id="header-logo">
                 <svg class="logo-svg" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15 10C8.37258 10 3 15.3726 3 22C3 28.6274 8.37258 34 15 34H25C31.6274 34 37 28.6274 37 22C37 15.3726 31.6274 10 25 10H15Z" stroke="var(--primary-teal)" stroke-width="3" stroke-linecap="round"/>
                     <circle cx="15" cy="22" r="5" fill="var(--primary-teal)"/>
@@ -25,21 +23,18 @@
                     <text x="50" y="32" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="var(--text-light)">GASTRO<tspan fill="var(--primary-teal)">INOVA</tspan></text>
                 </svg>
             </a>
-            
+
             <nav class="nav-menu" id="nav-menu">
                 <a href="#inicio" class="nav-link active">Inicio</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#tienda" class="nav-link">Tienda de Servicios</a>
-                <a href="#metodo" class="nav-link">Nuestro Método</a>
+                <a href="#servicios" class="nav-link">Soluciones</a>
+                <a href="#experiencia" class="nav-link">Experiencia</a>
+                <a href="#metodo" class="nav-link">Metodo</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
 
             <div class="header-actions">
-                <button class="cart-btn" id="cart-toggle" aria-label="Abrir carrito">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
-                    <span class="cart-badge" id="cart-count">0</span>
-                </button>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+                <a href="#contacto" class="header-cta magnetic-btn">Hablemos</a>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -48,36 +43,35 @@
         </div>
     </header>
 
-    <!-- Mobile Navigation Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
         <nav class="mobile-nav">
             <a href="#inicio" class="mobile-nav-link">Inicio</a>
-            <a href="#servicios" class="mobile-nav-link">Servicios</a>
-            <a href="#tienda" class="mobile-nav-link">Tienda de Servicios</a>
-            <a href="#metodo" class="mobile-nav-link">Nuestro Método</a>
+            <a href="#servicios" class="mobile-nav-link">Soluciones</a>
+            <a href="#experiencia" class="mobile-nav-link">Experiencia</a>
+            <a href="#metodo" class="mobile-nav-link">Metodo</a>
             <a href="#contacto" class="mobile-nav-link">Contacto</a>
         </nav>
     </div>
 
     <main>
-        
-        <!-- Hero Section -->
         <section id="inicio" class="hero-section">
             <div class="hero-bg-glow"></div>
+            <div class="hero-orb orb-one"></div>
+            <div class="hero-orb orb-two"></div>
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="badge">Impulsora Digital de Comercios</div>
                     <h1 class="hero-title">Impulsamos tu comercio al <br><span class="gradient-text">entorno digital</span></h1>
                     <p class="hero-description">
-                        Creemos que cada comercio tiene una esencia única que merece ser mostrada al mundo. Te ayudamos a dar el salto digital con soluciones de diseño, tecnología y estrategia que <span class="highlight-text" id="typing-text">multiplican tus ventas</span>.
+                        Creamos una presencia web con carisma, movimiento y estrategia para que tu marca no solo se vea mejor, sino que se sienta mas viva. Cada scroll debe reforzar confianza, diferenciacion y deseo de contacto.
                     </p>
                     <div class="hero-actions">
-                        <a href="#tienda" class="btn btn-primary">Ver Tienda de Servicios</a>
-                        <a href="#contacto" class="btn btn-secondary">Solicitar Asesoría</a>
+                        <a href="#servicios" class="btn btn-primary magnetic-btn">Descubrir Soluciones</a>
+                        <a href="#contacto" class="btn btn-secondary magnetic-btn">Solicitar Asesoria</a>
                     </div>
                 </div>
                 <div class="hero-graphic">
-                    <div class="glass-card hero-card">
+                    <div class="glass-card hero-card interactive-surface">
                         <div class="card-header-bar">
                             <span class="dot red"></span>
                             <span class="dot yellow"></span>
@@ -95,31 +89,32 @@
                                     <div class="mock-chart-bar" style="height: 55%"></div>
                                     <div class="mock-chart-bar highlight" style="height: 95%"></div>
                                 </div>
-                                <div class="mock-stat">+240% conversión</div>
+                                <div class="mock-stat">+240% conversion</div>
                             </div>
+                            <div class="hero-floating-chip chip-one">SEO Local</div>
+                            <div class="hero-floating-chip chip-two">Reserva Directa</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
         <section class="stats-section">
             <div class="container">
                 <div class="stats-grid">
-                    <div class="stat-card">
+                    <div class="stat-card interactive-surface">
                         <span class="stat-number">100%</span>
                         <span class="stat-label">Libre de intermediarios y comisiones</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card interactive-surface">
                         <span class="stat-number">+150%</span>
                         <span class="stat-label">Incremento medio en reservas online</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card interactive-surface">
                         <span class="stat-number">24/7</span>
-                        <span class="stat-label">Soporte y actualización rápida</span>
+                        <span class="stat-label">Soporte y actualizacion rapida</span>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card interactive-surface">
                         <span class="stat-number">10x</span>
                         <span class="stat-label">Mayor visibilidad en Google Maps</span>
                     </div>
@@ -127,179 +122,153 @@
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="servicios" class="services-section">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Nuestras Soluciones Digitales</h2>
-                    <p class="section-subtitle">Combinamos diseño, tecnología y estrategia para atraer clientes, aumentar tus ventas y destacar frente a la competencia.</p>
+                    <h2 class="section-title">Soluciones Digitales con Presencia Premium</h2>
+                    <p class="section-subtitle">Combinamos diseno, tecnologia y estrategia para atraer clientes, aumentar tus ventas y destacar frente a la competencia.</p>
                 </div>
-                
+
                 <div class="services-grid">
-                    <!-- Servicio 1 -->
-                    <div class="service-card">
+                    <div class="service-card interactive-surface">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                         </div>
-                        <h3>Diseño y Gestión Web</h3>
-                        <p>Creación de páginas web corporativas totalmente personalizadas para tu comercio. Con diseño responsivo y optimizado para Google.</p>
+                        <h3>Diseno Web con Identidad</h3>
+                        <p>Webs corporativas con personalidad visual, estructura clara y narrativa pensada para transmitir valor en segundos.</p>
                         <ul class="service-bullets">
-                            <li>Diseño exclusivo de marca</li>
-                            <li>Velocidad de carga excelente</li>
-                            <li>Gestión y dominio incluidos</li>
+                            <li>Direccion visual de marca</li>
+                            <li>Experiencia mobile-first</li>
+                            <li>Arquitectura enfocada en conversion</li>
                         </ul>
                     </div>
 
-                    <!-- Servicio 2 -->
-                    <div class="service-card">
+                    <div class="service-card interactive-surface">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="3"></rect><rect x="14" y="7" width="3" height="3"></rect><rect x="7" y="14" width="3" height="3"></rect><rect x="14" y="14" width="3" height="3"></rect></svg>
                         </div>
-                        <h3>Catálogos Digitales QR</h3>
-                        <p>Cartas y catálogos interactivos mediante códigos QR. Fáciles de actualizar en cualquier momento sin coste de reimpresión.</p>
+                        <h3>Catalogos QR y Cartas Digitales</h3>
+                        <p>Interfaces ligeras, claras y faciles de actualizar para restaurantes y comercios que necesitan agilidad sin perder imagen.</p>
                         <ul class="service-bullets">
-                            <li>Actualizaciones instantáneas</li>
-                            <li>Código QR de alta definición</li>
-                            <li>Adaptado para smartphones</li>
+                            <li>Actualizaciones instantaneas</li>
+                            <li>Navegacion intuitiva</li>
+                            <li>Optimizacion para movil</li>
                         </ul>
                     </div>
 
-                    <!-- Servicio 3 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                        </div>
-                        <h3>Reservas y Pedidos Online</h3>
-                        <p>Tu propio sistema de reservas de mesas o pedidos para llevar o a domicilio. Totalmente integrado y sin comisiones de apps externas.</p>
-                        <ul class="service-bullets">
-                            <li>Notificaciones automáticas</li>
-                            <li>Sin comisiones de terceros</li>
-                            <li>Gestión de turnos e inventario</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 4 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                        </div>
-                        <h3>Tienda Online Propia (E-Shop)</h3>
-                        <p>Configuramos tu tienda online completa para vender tus productos. Automatiza tus ventas y pasarela de cobros sin depender de intermediarios.</p>
-                        <ul class="service-bullets">
-                            <li>Pasarela de cobro segura</li>
-                            <li>Gestión de stock intuitiva</li>
-                            <li>Facturación automatizada</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 5 -->
-                    <div class="service-card">
+                    <div class="service-card interactive-surface">
                         <div class="service-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                         </div>
-                        <h3>Marketing Digital Local</h3>
-                        <p>Posicionamiento SEO en Google, fichas de Google Maps y gestión profesional de redes sociales para captar clientes en tu zona geográfica.</p>
+                        <h3>Marketing Local con Traccion</h3>
+                        <p>SEO local, presencia en Google Maps y contenidos orientados a hacer visible el negocio donde realmente importa.</p>
                         <ul class="service-bullets">
-                            <li>Posicionamiento SEO Local</li>
-                            <li>Optimización de Google Maps</li>
-                            <li>Campañas publicitarias locales</li>
-                        </ul>
-                    </div>
-
-                    <!-- Servicio 6 -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                        </div>
-                        <h3>Foto y Vídeo Profesional</h3>
-                        <p>Sesiones audiovisuales profesionales para capturar la esencia de tus platos y productos de la forma más atractiva posible.</p>
-                        <ul class="service-bullets">
-                            <li>Fotografía de alta definición</li>
-                            <li>Vídeos en formato Reels/TikTok</li>
-                            <li>Edición y retoque incluidos</li>
+                            <li>Visibilidad geografica</li>
+                            <li>Mensajes mas persuasivos</li>
+                            <li>Contenido orientado a accion</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- E-Shop Section (Tienda de Servicios) -->
-        <section id="tienda" class="shop-section">
+        <section id="experiencia" class="experience-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge badge-accent">Demo de E-Shop en Vivo</span>
-                    <h2 class="section-title">Tienda de Servicios Digitales</h2>
-                    <p class="section-subtitle">Selecciona los paquetes de digitalización que necesita tu negocio, personalízalos con los extras disponibles y solicita tu presupuesto por correo electrónico de inmediato.</p>
+                    <span class="badge badge-accent">Experiencia de Marca</span>
+                    <h2 class="section-title">Una Landing que se Mueve, Respira y Convence</h2>
+                    <p class="section-subtitle">Disenamos experiencias visuales con ritmo, profundidad y transiciones que convierten una visita en una sensacion clara de profesionalidad.</p>
                 </div>
 
-                <div class="shop-grid" id="products-container">
-                    <!-- Products will be dynamically generated by JS -->
+                <div class="experience-grid">
+                    <article class="experience-panel glass-card interactive-surface">
+                        <span class="experience-kicker">Impacto inmediato</span>
+                        <h3>Una primera impresion que parece premium desde el primer scroll.</h3>
+                        <p>Hero con profundidad, bloques que aparecen con intencion y una narrativa visual que empuja a seguir bajando.</p>
+                    </article>
+                    <article class="experience-panel glass-card interactive-surface">
+                        <span class="experience-kicker">Movimiento con objetivo</span>
+                        <h3>Animacion pensada para vender mejor, no solo para decorar.</h3>
+                        <p>Contadores, cambios de foco, elevacion de tarjetas y highlights suaves para dirigir la atencion a lo importante.</p>
+                    </article>
+                    <article class="experience-panel glass-card interactive-surface">
+                        <span class="experience-kicker">Sensacion de control</span>
+                        <h3>Interacciones fluidas que hacen que la marca se sienta viva y bien construida.</h3>
+                        <p>Microtransiciones, botones magneticos y superficies reactivas para transmitir cuidado por el detalle.</p>
+                    </article>
+                </div>
+
+                <div class="marquee-shell">
+                    <div class="marquee-track">
+                        <span>Scroll cinematografico</span>
+                        <span>Reveals con profundidad</span>
+                        <span>Microinteracciones premium</span>
+                        <span>Movimiento orientado a conversion</span>
+                        <span>Diseno con personalidad</span>
+                        <span>Scroll cinematografico</span>
+                        <span>Reveals con profundidad</span>
+                        <span>Microinteracciones premium</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Cómo Trabajamos Section -->
         <section id="metodo" class="workflow-section">
             <div class="container">
                 <div class="section-header">
-                    <span class="badge">Nuestro Método</span>
-                    <h2 class="section-title">Cómo Digitalizamos tu Negocio</h2>
+                    <span class="badge">Nuestro Metodo</span>
+                    <h2 class="section-title">Como Digitalizamos tu Negocio</h2>
                     <p class="section-subtitle">Un proceso claro, transparente y enfocado a resultados para llevar tu comercio al siguiente nivel digital.</p>
                 </div>
 
                 <div class="workflow-grid">
-                    <!-- Paso 1 -->
-                    <div class="workflow-card glass-card">
+                    <div class="workflow-card glass-card interactive-surface">
                         <div class="workflow-number">01</div>
                         <div class="workflow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                         </div>
-                        <h3>1. Asesoría Inicial</h3>
-                        <p>Analizamos el estado actual de tu negocio, tu competencia y definimos los objetivos clave para trazar la mejor estrategia digital.</p>
+                        <h3>1. Diagnostico Inicial</h3>
+                        <p>Analizamos el estado actual de tu negocio, la competencia y los objetivos que de verdad moveran resultados.</p>
                     </div>
 
-                    <!-- Paso 2 -->
-                    <div class="workflow-card glass-card">
+                    <div class="workflow-card glass-card interactive-surface">
                         <div class="workflow-number">02</div>
                         <div class="workflow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                         </div>
-                        <h3>2. Diseño y Desarrollo</h3>
-                        <p>Diseñamos tu página web o tienda online a medida. Sin plantillas genéricas, optimizada para móviles y 100% autogestionable.</p>
+                        <h3>2. Diseno y Desarrollo</h3>
+                        <p>Construimos una experiencia web a medida con estructura clara, identidad visual y foco en conversion.</p>
                     </div>
 
-                    <!-- Paso 3 -->
-                    <div class="workflow-card glass-card">
+                    <div class="workflow-card glass-card interactive-surface">
                         <div class="workflow-number">03</div>
                         <div class="workflow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                         </div>
-                        <h3>3. Puesta en Marcha</h3>
-                        <p>Configuramos el SEO local (Google Maps), conectamos pasarelas de pago y lanzamos el proyecto sin comisiones de intermediarios.</p>
+                        <h3>3. Lanzamiento con Traccion</h3>
+                        <p>Publicamos, afinamos el posicionamiento local y dejamos la marca lista para captar mejores oportunidades.</p>
                     </div>
 
-                    <!-- Paso 4 -->
-                    <div class="workflow-card glass-card">
+                    <div class="workflow-card glass-card interactive-surface">
                         <div class="workflow-number">04</div>
                         <div class="workflow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
                         </div>
-                        <h3>4. Soporte y Control</h3>
-                        <p>Te acompañamos en tu día a día. Estamos a tu disposición para actualizar productos, precios o resolver cualquier tipo de duda.</p>
+                        <h3>4. Soporte y Evolucion</h3>
+                        <p>Seguimos ajustando contenido, mensajes y mejoras visuales para que la web no se quede quieta.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contacto" class="contact-section">
             <div class="container contact-container">
                 <div class="contact-info-block">
-                    <h2>¿Listo para dar el salto digital?</h2>
-                    <p>Ponte en contacto con nosotros. Nuestro equipo te asesorará para diseñar la estrategia digital perfecta para tu negocio local o restaurante.</p>
-                    
+                    <h2>Listo para dar el salto digital</h2>
+                    <p>Ponte en contacto con nosotros. Nuestro equipo te asesorara para disenar la estrategia digital perfecta para tu negocio local o restaurante.</p>
+
                     <div class="contact-methods">
-                        <div class="contact-item">
+                        <div class="contact-item interactive-surface">
                             <div class="contact-item-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             </div>
@@ -309,12 +278,12 @@
                             </div>
                         </div>
 
-                        <div class="contact-item">
+                        <div class="contact-item interactive-surface">
                             <div class="contact-item-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V7l-3 2-2-2-5 5"></path><path d="M3 5h8"></path><path d="M3 12h5"></path><path d="M3 19h9"></path><path d="M14 19l2 2 5-5"></path></svg>
                             </div>
                             <div>
-                                <h4>Atención Online</h4>
+                                <h4>Atencion Online</h4>
                                 <div class="phones">
                                     <span>Respuesta por email y seguimiento personalizado de cada solicitud.</span>
                                 </div>
@@ -323,35 +292,34 @@
                     </div>
                 </div>
 
-                <div class="contact-form-block glass-card">
-                    <h3>Envíanos un Mensaje</h3>
+                <div class="contact-form-block glass-card interactive-surface">
+                    <h3>Envianos un Mensaje</h3>
                     <form id="contact-form" novalidate>
                         <div class="form-group">
                             <label for="contact-name">Tu Nombre</label>
-                            <input type="text" id="contact-name" name="name" required placeholder="Ej. Juan Pérez">
+                            <input type="text" id="contact-name" name="name" required placeholder="Ej. Juan Perez">
                             <span class="error-msg" id="name-error">El nombre es requerido</span>
                         </div>
                         <div class="form-group">
                             <label for="contact-email">Email</label>
                             <input type="email" id="contact-email" name="email" required placeholder="Ej. juan@minegocio.com">
-                            <span class="error-msg" id="email-error">Introduce un email válido</span>
+                            <span class="error-msg" id="email-error">Introduce un email valido</span>
                         </div>
                         <div class="form-group">
-                            <label for="contact-phone">Teléfono</label>
+                            <label for="contact-phone">Telefono</label>
                             <input type="tel" id="contact-phone" name="phone" placeholder="Ej. 600 000 000">
                         </div>
                         <div class="form-group">
-                            <label for="contact-message">¿Qué necesita tu negocio?</label>
-                            <textarea id="contact-message" name="message" rows="4" placeholder="Cuéntanos sobre tu comercio, web, tienda online, etc..."></textarea>
+                            <label for="contact-message">Que necesita tu negocio</label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="Cuentanos sobre tu comercio, web, catalogo, reservas o visibilidad local..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+                        <button type="submit" class="btn btn-primary btn-block magnetic-btn">Enviar Solicitud</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
@@ -361,25 +329,25 @@
                     <circle cx="25" cy="22" r="5" fill="var(--text-light)"/>
                     <text x="50" y="32" font-family="'Outfit', sans-serif" font-size="22" font-weight="800" fill="var(--text-light)">GASTRO<tspan fill="var(--primary-teal)">INOVA</tspan></text>
                 </svg>
-                <p>Impulsora digital de comercios locales. Creando soluciones web y e-commerce premium sin intermediarios.</p>
+                <p>Impulsora digital de comercios locales. Creamos soluciones web con personalidad, claridad y orientacion a resultados.</p>
             </div>
-            
+
             <div class="footer-links">
-                <h4>Enlaces Rápidos</h4>
+                <h4>Enlaces Rapidos</h4>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#tienda">Tienda de Servicios</a></li>
-                    <li><a href="#metodo">Nuestro Método</a></li>
+                    <li><a href="#servicios">Soluciones</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#metodo">Metodo</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
                 <h4>Contacto Oficial</h4>
-                <p>📍 Soporte digital nacional</p>
-                <p>✉️ <a href="mailto:info@gastroinova.com">info@gastroinova.com</a></p>
-                <p>📩 Solicitudes y presupuestos gestionados por correo electrónico.</p>
+                <p>Soporte digital nacional</p>
+                <p><a href="mailto:info@gastroinova.com">info@gastroinova.com</a></p>
+                <p>Solicitudes y presupuestos gestionados por correo electronico.</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -387,90 +355,8 @@
         </div>
     </footer>
 
-    <!-- Cart Sidebar Panel -->
-    <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-sidebar-header">
-            <h3>Tu Carrito de Servicios</h3>
-            <button class="cart-close" id="cart-close" aria-label="Cerrar carrito">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-        </div>
-        <div class="cart-items-container" id="cart-items-container">
-            <!-- Items added to cart will appear here -->
-            <div class="cart-empty-msg">Tu carrito está vacío. ¡Elige un plan de servicios arriba para empezar!</div>
-        </div>
-        <div class="cart-sidebar-footer">
-            <div class="cart-total-row">
-                <span>Total Estimado:</span>
-                <span class="cart-total-price" id="cart-total-price">0 €</span>
-            </div>
-            <p class="cart-note">*Los precios son estimativos. Al finalizar la solicitud se abrirá tu correo con la configuración preparada para pedir presupuesto.</p>
-            <button class="btn btn-primary btn-block" id="checkout-btn" disabled>Continuar y Enviar por Email</button>
-        </div>
-    </div>
-    
-    <!-- Sidebar Overlay -->
-    <div class="cart-sidebar-overlay" id="cart-sidebar-overlay"></div>
-
-    <!-- Checkout Modal -->
-    <div class="modal-overlay" id="checkout-modal">
-        <div class="modal-card glass-card">
-            <button class="modal-close" id="modal-close" aria-label="Cerrar modal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-            <div class="modal-header">
-                <h3>Finalizar Solicitud de Digitalización</h3>
-                <p>Completa tus datos para enviarnos tu carrito configurado por correo electrónico.</p>
-            </div>
-            <form id="checkout-form" class="modal-form" novalidate>
-                <div class="form-group">
-                    <label for="checkout-name">Tu Nombre *</label>
-                    <input type="text" id="checkout-name" required placeholder="Ej. Carlos Martínez">
-                    <span class="error-msg" id="checkout-name-error">El nombre es obligatorio</span>
-                </div>
-                <div class="form-group">
-                    <label for="checkout-business">Nombre de tu Comercio / Restaurante *</label>
-                    <input type="text" id="checkout-business" required placeholder="Ej. Restaurante Gran Vía">
-                    <span class="error-msg" id="checkout-business-error">El nombre de tu negocio es obligatorio</span>
-                </div>
-                <div class="form-group">
-                    <label for="checkout-phone">Teléfono de contacto *</label>
-                    <input type="tel" id="checkout-phone" required placeholder="Ej. 600000000">
-                    <span class="error-msg" id="checkout-phone-error">Introduce un teléfono de contacto</span>
-                </div>
-                <div class="form-group">
-                    <label for="checkout-email">Correo Electrónico *</label>
-                    <input type="email" id="checkout-email" required placeholder="Ej. carlos@minegocio.com">
-                    <span class="error-msg" id="checkout-email-error">Introduce un email válido</span>
-                </div>
-                <div class="form-group">
-                    <label for="checkout-notes">Detalles o requerimientos adicionales</label>
-                    <textarea id="checkout-notes" rows="3" placeholder="Ej. Quisiera integración con mi base de datos de reservas actual..."></textarea>
-                </div>
-                
-                <div class="order-summary-box">
-                    <h4>Servicios seleccionados:</h4>
-                    <div id="modal-order-summary-list">
-                        <!-- Summary items loaded here -->
-                    </div>
-                    <div class="summary-total-row">
-                        <span>Total Presupuestado:</span>
-                        <strong id="modal-total-price">0 €</strong>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                    Enviar Solicitud por Email
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
     <div class="toast" id="toast"></div>
 
-    <!-- Main Logic Script -->
     <script src="app.js"></script>
 </body>
 </html>
