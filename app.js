@@ -1,6 +1,6 @@
 /* ==========================================================================
    GASTROINOVA - LÓGICA DE LA APLICACIÓN
-   Animaciones, Gestión del Carrito E-Shop y Flujo de WhatsApp
+   Animaciones, Gestión del Carrito E-Shop y Flujo de contacto
    ========================================================================== */
 
 // --- DATOS DEL CATÁLOGO DE SERVICIOS ---
@@ -78,8 +78,8 @@ const PRODUCTS = [
 // --- ESTADO DE LA APLICACIÓN (CARRITO) ---
 let cart = [];
 
-// Teléfono oficial de WhatsApp de Gastroinova (Formato internacional, España: +34)
-const GASTROINOVA_WA_PHONE = "34615423895";
+// Canal público de contacto para la web publicada
+const GASTROINOVA_CONTACT_EMAIL = "info@gastroinova.com";
 
 // --- ELEMENTOS DEL DOM ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -389,7 +389,7 @@ function closeCartSidebar() {
     document.getElementById("cart-sidebar-overlay").classList.remove("active");
 }
 
-// --- 7. MODAL DE CHECKOUT Y ENVÍO A WHATSAPP ---
+// --- 7. MODAL DE CHECKOUT Y ENVÍO POR EMAIL ---
 function initCheckoutModal() {
     const checkoutBtn = document.getElementById("checkout-btn");
     const closeBtn = document.getElementById("modal-close");
@@ -417,7 +417,7 @@ function initCheckoutModal() {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         if (validateCheckoutForm()) {
-            sendOrderToWhatsApp();
+            sendOrderByEmail();
         }
     });
 }
@@ -480,25 +480,25 @@ function validateCheckoutForm() {
     return isValid;
 }
 
-function sendOrderToWhatsApp() {
+function sendOrderByEmail() {
     const name = document.getElementById("checkout-name").value.trim();
     const business = document.getElementById("checkout-business").value.trim();
     const phone = document.getElementById("checkout-phone").value.trim();
     const email = document.getElementById("checkout-email").value.trim();
     const notes = document.getElementById("checkout-notes").value.trim();
 
-    // Construir mensaje de WhatsApp
-    let message = `🚀 *SOLICITUD DE DIGITALIZACIÓN - GASTROINOVA*\n\n`;
-    message += `Hola Gastroinova, quiero solicitar un presupuesto formal para digitalizar mi comercio. Aquí tienes mis datos:\n\n`;
-    message += `👤 *Nombre:* ${name}\n`;
-    message += `🏢 *Negocio:* ${business}\n`;
-    message += `📞 *Teléfono:* ${phone}\n`;
-    message += `✉️ *Email:* ${email}\n`;
+    const subject = `Solicitud de digitalización - ${business}`;
+    let message = `SOLICITUD DE DIGITALIZACION - GASTROINOVA\n\n`;
+    message += `Hola Gastroinova, quiero solicitar un presupuesto formal para digitalizar mi comercio. Aqui tienes mis datos:\n\n`;
+    message += `Nombre: ${name}\n`;
+    message += `Negocio: ${business}\n`;
+    message += `Telefono: ${phone}\n`;
+    message += `Email: ${email}\n`;
     if (notes) {
-        message += `📝 *Notas:* ${notes}\n`;
+        message += `Notas: ${notes}\n`;
     }
-    message += `\n─────────────────────\n`;
-    message += `🛒 *SERVICIOS CONFIGURADOS:*\n\n`;
+    message += `\n---------------------\n`;
+    message += `SERVICIOS CONFIGURADOS:\n\n`;
 
     let total = 0;
     cart.forEach((item, index) => {
@@ -507,32 +507,28 @@ function sendOrderToWhatsApp() {
         const subtotal = unitPrice * item.quantity;
         total += subtotal;
 
-        message += `${index + 1}. *${item.title}* (x${item.quantity})\n`;
-        message += `   • Base: ${item.basePrice} € ${item.period}\n`;
+        message += `${index + 1}. ${item.title} (x${item.quantity})\n`;
+        message += `   - Base: ${item.basePrice} EUR ${item.period}\n`;
         item.extras.forEach(ext => {
-            message += `   • Extra: + ${ext.label} (+${ext.price} €)\n`;
+            message += `   - Extra: + ${ext.label} (+${ext.price} EUR)\n`;
         });
-        message += `   *Subtotal:* ${subtotal} €\n\n`;
+        message += `   Subtotal: ${subtotal} EUR\n\n`;
     });
 
-    message += `─────────────────────\n`;
-    message += `💰 *TOTAL ESTIMADO:* ${total} €\n`;
-    message += `─────────────────────\n\n`;
-    message += `Quedo a la espera de que vuestro equipo se ponga en contacto conmigo para revisar los detalles técnicos. ¡Gracias!`;
+    message += `---------------------\n`;
+    message += `TOTAL ESTIMADO: ${total} EUR\n`;
+    message += `---------------------\n\n`;
+    message += `Quedo a la espera de que vuestro equipo se ponga en contacto conmigo para revisar los detalles tecnicos. Gracias.`;
 
-    // Codificar para URL
-    const encodedMessage = encodeURIComponent(message);
-    const waUrl = `https://api.whatsapp.com/send?phone=${GASTROINOVA_WA_PHONE}&text=${encodedMessage}`;
+    const mailtoUrl = `mailto:${GASTROINOVA_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
-    // Abrir WhatsApp en pestaña nueva
-    window.open(waUrl, "_blank");
+    window.location.href = mailtoUrl;
 
-    // Limpiar carrito, cerrar modal y dar feedback
     cart = [];
     updateCartUI();
     document.getElementById("checkout-modal").classList.remove("open");
     document.getElementById("checkout-form").reset();
-    showToast("¡Pedido enviado por WhatsApp con éxito!");
+    showToast("Tu solicitud se ha preparado en tu correo.");
 }
 
 
@@ -567,8 +563,22 @@ function initContactForm() {
         }
 
         if (isValid) {
-            // Simular envío exitoso
-            showToast("¡Mensaje recibido! Te contactaremos muy pronto.");
+            const phoneInput = document.getElementById("contact-phone");
+            const messageInput = document.getElementById("contact-message");
+            const subject = `Nuevo contacto web - ${nameInput.value.trim()}`;
+            let body = `Hola Gastroinova,\n\n`;
+            body += `Quiero mas informacion sobre vuestros servicios.\n\n`;
+            body += `Nombre: ${nameInput.value.trim()}\n`;
+            body += `Email: ${emailInput.value.trim()}\n`;
+            if (phoneInput.value.trim()) {
+                body += `Telefono: ${phoneInput.value.trim()}\n`;
+            }
+            if (messageInput.value.trim()) {
+                body += `Mensaje: ${messageInput.value.trim()}\n`;
+            }
+
+            window.location.href = `mailto:${GASTROINOVA_CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            showToast("Tu mensaje se ha preparado en tu correo.");
             form.reset();
         }
     });
